@@ -1,0 +1,19 @@
+<div class="p-3">
+    <h5>Overview</h5>
+    <ul>
+        <li>In both ODP and Data Stack the Encryption and Decryption is done by App's Key and Cerificate that gets
+            generated on an App's Creation</li>
+        <li>The Key &amp; Cert Provided by customer or the ENCRYPTION_KEY is used to Encrypt &amp; Decrypt the App's Key
+            & Cert.</li>
+        <li>ODP used Key &amp; Cert Provided by customer and mounted as a Secret in K8S.</li>
+        <li>Data Stack uses ENCRYPTION_KEY as text value stored in ENV.</li>
+    </ul>
+    <div class="mb-4">
+        <h5 class="border-bottom p-3 bg-light border rounded">ODP Security</h5>
+        <img class="w-100 my-3" src="assets/img/old_security.drawio.svg" alt="">
+    </div>
+    <div class="mb-4">
+        <h5 class="border-bottom p-3 bg-light border rounded">Data Stack Security</h5>
+        <img class="w-100 my-3" src="assets/img/new_security.drawio.svg" alt="">
+    </div>
+</div>

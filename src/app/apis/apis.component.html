@@ -1,0 +1,27 @@
+<div class="p-3">
+    <h5 class="border-bottom p-3 bg-light border rounded">Overview</h5>
+    <p>Here are the List of API Endpoint that got added/updated/removed.</p>
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm">
+    </div>
+    <table class="table table-bordered font-13">
+        <thead class="table-secondary">
+            <tr>
+                <th>Module</th>
+                <th>ODP</th>
+                <th>Data Stack</th>
+                <th>Methods</th>
+                <th>Remarks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of apiList | commonFilter:searchTerm:'oldPath':'newPath':'method':'remarks'">
+                <td>{{item._id}}</td>
+                <td>{{item.oldPath}}</td>
+                <td>{{item.newPath}}</td>
+                <td>{{item.method}}</td>
+                <td>{{item.remarks}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

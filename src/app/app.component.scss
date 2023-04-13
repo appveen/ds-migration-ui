@@ -1,0 +1,10 @@
+.content {
+    max-height: calc(100vh - 82px);
+    overflow-y: auto;
+}
+
+.sidenav {
+    min-width: 260px;
+    max-width: 260px;
+    overflow: auto;
+}

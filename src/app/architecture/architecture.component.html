@@ -1,0 +1,126 @@
+<div class="container p-3">
+    <div class="mb-4">
+        <h5 class="border-bottom p-3 bg-light border rounded">Overview</h5>
+        <ul>
+            <li>ODP and Data Stack both works on top of Kubernetes(K8s)</li>
+            <li>ODP needed a docker/podman as realtime container builder mounted in DM to build images. Where as Data
+                Stack doesn't need it.</li>
+            <li>In Case of B2B ODP had a 2-way SSL communication, which was difficult to configure. In Data Stack we
+                have removed it and made the communication simpler.</li>
+        </ul>
+    </div>
+    <div class="mb-4">
+        <h5 class="border-bottom p-3 bg-light border rounded">ODP Architecture</h5>
+        <img class="w-100 my-3" src="assets/img/odp_arch.drawio.svg" alt="">
+        <p class="p-2 border rounded bg-light text-secondary">
+            <strong>Components in ODP</strong>
+        </p>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th class="table-light text-secondary">USER</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">SEC</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">SM</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">WF</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">PM</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">B2BGW</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">DM</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">MON</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">NE</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">GW</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">NGINX</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">REDIS</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">NATS</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mb-4">
+        <h5 class="border-bottom p-3 bg-light border rounded">Data Stack Architecture</h5>
+        <img class="w-100 my-3" src="assets/img/ds_arch.drawio.svg" alt="">
+        <p class="p-2 border rounded bg-light text-secondary">
+            <strong>Components in Data Stack</strong>
+        </p>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th class="table-light text-secondary">USER</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">SM</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">BM</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">MON</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">NE</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">COMMON</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">GW</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">PROXY</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">CACHE</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="table-light text-secondary">MESSAGING</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

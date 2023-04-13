@@ -3,16 +3,40 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
+import { ArchitectureComponent } from './architecture/architecture.component';
+import { ApisComponent } from './apis/apis.component';
+import { YamlsComponent } from './yamls/yamls.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { ConfigEnvComponent } from './config-env/config-env.component';
+import { SecurityComponent } from './security/security.component';
+import { IntegrationComponent } from './integration/integration.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonFilterPipe } from './utils/common-filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ArchitectureComponent,
+    ApisComponent,
+    YamlsComponent,
+    AuthenticationComponent,
+    ConfigEnvComponent,
+    SecurityComponent,
+    IntegrationComponent,
+    CommonFilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CommonFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
