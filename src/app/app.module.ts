@@ -15,6 +15,9 @@ import { IntegrationComponent } from './integration/integration.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonFilterPipe } from './utils/common-filter.pipe';
+import { DataServiceComponent } from './data-service/data-service.component';
+import { HeadingDirective } from './utils/heading.directive';
+import { SubHeadingDirective } from './utils/sub-heading.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { CommonFilterPipe } from './utils/common-filter.pipe';
     ConfigEnvComponent,
     SecurityComponent,
     IntegrationComponent,
-    CommonFilterPipe
+    CommonFilterPipe,
+    DataServiceComponent,
+    HeadingDirective,
+    SubHeadingDirective
   ],
   imports: [
     BrowserModule,

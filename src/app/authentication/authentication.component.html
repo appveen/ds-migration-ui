@@ -1,1 +1,62 @@
-<p>authentication works!</p>
+<div class="p-3">
+    <h5 appHeading>Overview</h5>
+    <ul>
+        <li>Configuration of Authentication is Changed.</li>
+        <li>ODP had three types of authentication system Local, AzureAD and LDAP, But only one can be used at a time.
+        </li>
+        <li>Data Stack supports three types of authentication system Local, AzureAD and LDAP, and all can be used at the
+            same time.</li>
+    </ul>
+    <div class="mb-4">
+        <h5 appSubHeading>ODP Authentication Configuration</h5>
+        <div class="ps-3">
+            <h6>Configuration</h6>
+            <ul>
+                <li>Was done using UI, by filling form values.</li>
+            </ul>
+            <h6>Pros</h6>
+            <ul>
+                <li>UI Based Authentication Configuration was User Friendly.</li>
+                <li>Users are imported from the Authentication System using UI.</li>
+            </ul>
+            <h6>Cons</h6>
+            <ul>
+                <li>Only one Authentication System can be used at a time.</li>
+                <li>On Changing Authentication System all Users are deleted.</li>
+                <li>Only Admin Users can import users from Authentication System.</li>
+                <li>Created a lot of confusion with roles and permissions.</li>
+            </ul>
+        </div>
+        <img class="w-100 my-3" src="assets/img/odp_auth.png" alt="">
+    </div>
+    <div class="mb-4">
+        <h5 appSubHeading>Data Stack Authentication Configuration</h5>
+        <div class="ps-3">
+            <h6>Configuration</h6>
+            <ul>
+                <li>Is done using Environment Variables.</li>
+                <li><strong>AZURE_AD_CLIENT_ID</strong> </li>
+                <li><strong>AZURE_AD_CLIENT_SECRET</strong> </li>
+                <li><strong>AZURE_AD_TENANT</strong> </li>
+                <li><strong>AZURE_AD_USER_ATTRIBUTE</strong> </li>
+                <li><strong>LDAP_SERVER_URL</strong> </li>
+                <li><strong>LDAP_BIND_DN</strong> </li>
+                <li><strong>LDAP_BIND_PASSWORD</strong> </li>
+                <li><strong>LDAP_BASE_FILTER</strong> </li>
+                <li><strong>LDAP_BASE_DN</strong> </li>
+            </ul>
+            <h6>Pros</h6>
+            <ul>
+                <li>Multiple Authentication Systems are supported at a time.</li>
+                <li>Any user that has access to all users in the Authentication System can import users.</li>
+                <li>Users are not deleted unless you want to.</li>
+                <li>Users of any Authentication System can be imported using a CSV file.</li>
+            </ul>
+            <h6>Cons</h6>
+            <ul>
+                <li>Configuring any new Authentication System needs a DevOps Personal to Configure at Infra Level.</li>
+            </ul>
+        </div>
+        <img class="w-100 my-3" src="assets/img/ds_auth.png" alt="">
+    </div>
+</div>

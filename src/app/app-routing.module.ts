@@ -8,6 +8,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { ConfigEnvComponent } from './config-env/config-env.component';
 import { SecurityComponent } from './security/security.component';
 import { IntegrationComponent } from './integration/integration.component';
+import { DataServiceComponent } from './data-service/data-service.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'apis', component: ApisComponent },
   { path: 'authentication', component: AuthenticationComponent },
   { path: 'security', component: SecurityComponent },
+  { path: 'data-service', component: DataServiceComponent },
   { path: 'integration', component: IntegrationComponent },
 ];
 

@@ -1,6 +1,9 @@
 <div class="p-3">
-    <h5 class="border-bottom p-3 bg-light border rounded">Overview</h5>
-    <p>Here are the List of API Endpoint that got added/updated/removed.</p>
+    <h5 appHeading>Overview</h5>
+    <ul>
+        <li>Here are the List of API Endpoint that got added/updated/removed.</li>
+        <li>Any path containing <span class="badge text-bg-secondary p-1">{{'{'}}text{{'}'}}</span> is a parameter</li>
+    </ul>
     <div class="mb-3">
         <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm">
     </div>
