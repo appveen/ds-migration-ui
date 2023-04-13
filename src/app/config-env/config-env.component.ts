@@ -16,7 +16,7 @@ export class ConfigEnvComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('/assets/data/env-data.json').subscribe({
+    this.http.get('assets/data/env-data.json').subscribe({
       next: (value: any) => {
         this.envList = value;
       },

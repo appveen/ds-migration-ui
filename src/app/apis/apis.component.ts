@@ -15,7 +15,7 @@ export class ApisComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('/assets/data/api-data.json').subscribe({
+    this.http.get('assets/data/api-data.json').subscribe({
       next: (value: any) => {
         this.apiList = value;
       },
