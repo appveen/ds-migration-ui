@@ -2,30 +2,86 @@
     <h5 appHeading>Overview</h5>
     <ul>
         <li>Data Service has gone through many changes.</li>
-        <li>Defitniion Structure is changed.</li>
+        <li>Defitntion Structure is changed.</li>
         <li>Data Service has new features like State Model, Dynamic Filter and Multi-Level Workflows.</li>
     </ul>
-    <img src="assets/img/work_in_progress.gif" alt="">
-    <!-- <div class="mb-4">
-        <h5 appSubHeading>ODP Data Service</h5>
-        <div class="ps-3">
-            <h6>Configuration</h6>
-            <ul>
-                <li>Needed SSH Key & Certificate mounted as <i ngbTooltip="Kubernetes">K8S secret</i> named
-                    <strong>odp-sec</strong></li>
-            </ul>
+    <div class="d-flex w-100 mb-4">
+        <div class="w-50 me-3">
+            <h5 appSubHeading>ODP</h5>
+            <div class="ps-3">
+                <h6>Definition</h6>
+                <pre appCodeBlock>{{code['old-definition'] | json}}</pre>
+            </div>
         </div>
-        <img class="w-100 my-3" src="assets/img/old_security.drawio.svg" alt="">
+        <div class="w-50 ms-3">
+            <h5 appSubHeading>Data Stack</h5>
+            <div class="ps-3">
+                <h6>Definition</h6>
+                <pre appCodeBlock>{{code['new-definition'] | json}}</pre>
+            </div>
+        </div>
     </div>
-    <div class="mb-4">
-        <h5 appSubHeading>Data Stack Security</h5>
-        <div class="ps-3">
-            <h6>Configuration</h6>
-            <ul>
-                <li>Needs <strong>ENCRYPTION_KEY</strong> as Environment Variable in <i ngbTooltip="Kubernetes">K8S
-                        secret</i> or <i ngbTooltip="Kubernetes">K8S ConfigMap</i></li>
-            </ul>
+    <div class="ms-3 mb-4">
+        <h5 appSubHeading>Definition Conversion Code</h5>
+        <div class="">
+            <!-- <h6>Definition</h6> -->
+            <pre appCodeBlock [innerHTML]="code['definition-converter']"></pre>
         </div>
-        <img class="w-100 my-3" src="assets/img/new_security.drawio.svg" alt="">
-    </div> -->
+    </div>
+
+
+    <div class="ms-3 mb-4">
+        <h5 appSubHeading>Date Type Changed</h5>
+        <p>In data.stack, Date and Date-time fields will cease to exist as a simple key-value pair. Instead, the field
+            will
+            be saved as an object in the backend.<br>
+            The following are the new set of attributes.</p>
+
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>rawData</td>
+                    <td><i>String</i></td>
+                    <td>Raw data entered by the user.</td>
+                </tr>
+                <tr>
+                    <td>tzData</td>
+                    <td><i>String</i></td>
+                    <td>Date-time form with time zone</td>
+                </tr>
+                <tr>
+                    <td>tzInfo</td>
+                    <td><i>String</i></td>
+                    <td>Name of the timezone</td>
+                </tr>
+                <tr>
+                    <td>utc</td>
+                    <td><i>String</i></td>
+                    <td>A string representing the given date in the ISO 8601 format according to universal time.</td>
+                </tr>
+                <tr>
+                    <td>unix</td>
+                    <td><i>Number</i></td>
+                    <td>Number of milliseconds since 1 January, 1970, 00:00:00 UTC, with leap seconds ignored.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>E.g., for a field like executionTime, the data will be saved as</p>
+        <pre appCodeBlock>{{code['date-data'] | json}}</pre>
+        <p>If you have existing date and time fields, they would have to be migrated to the new format, data and logs,
+            to be
+            able to work with data.stack.</p>
+    </div>
+
+
+
+    <img src="assets/img/work_in_progress.gif" alt="">
 </div>

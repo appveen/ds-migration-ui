@@ -18,6 +18,7 @@ import { CommonFilterPipe } from './utils/common-filter.pipe';
 import { DataServiceComponent } from './data-service/data-service.component';
 import { HeadingDirective } from './utils/heading.directive';
 import { SubHeadingDirective } from './utils/sub-heading.directive';
+import { CodeBlockDirective } from './utils/code-block.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SubHeadingDirective } from './utils/sub-heading.directive';
     CommonFilterPipe,
     DataServiceComponent,
     HeadingDirective,
-    SubHeadingDirective
+    SubHeadingDirective,
+    CodeBlockDirective
   ],
   imports: [
     BrowserModule,
